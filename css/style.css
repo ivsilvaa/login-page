@@ -44,6 +44,18 @@
     justify-content: space-between;
 }
 
+#mode_icon {
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#mode_icon:hover {
+    color: #064fa2;
+    transform: scale(1.1);
+}
+
+
 #form_header h1 {
     font-size: 30px;
     position: relative;
@@ -60,7 +72,8 @@
 
 #social-media {
     display: flex;
-    justify-content: space-around;
+    margin: 0 auto;
+    gap: 26px;
 }
 
 #inputs {
@@ -93,7 +106,7 @@
 .input-field input {
     border: none;
     background-color: transparent;
-    width: 260px;
+    width: 320px;
     font-size: 18px;
     padding: 0 4px;
 }
@@ -118,6 +131,8 @@
     padding: 8px;
     border-radius: 12px;
     font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 #login-button:hover {
@@ -125,5 +140,3 @@
     color: #FFFFFF;
     transform: scale(1.1);
 }
-
-:required:
