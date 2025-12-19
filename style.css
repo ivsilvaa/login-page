@@ -36,6 +36,7 @@
     gap: 25px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.336);
     height: fit-content;
+    animation: dark-to-light 0.3s ease-in-out;
 }
 
 #form_header {
@@ -51,7 +52,6 @@
 }
 
 #mode_icon:hover {
-    color: #064fa2;
     transform: scale(1.1);
 }
 
@@ -136,7 +136,59 @@
 }
 
 #login-button:hover {
-    background-color: #064fa2;
-    color: #FFFFFF;
     transform: scale(1.1);
+}
+
+.dark#login_form {
+    color: var(--text-color-dark);
+    background-color: var(--background-form-dark);
+    animation: light-to-dark 0.3s ease-in-out;
+}
+
+.dark#login_form .input-field input {
+    color: var(--text-color-dark);
+}
+
+.dark#login_form .input-field i {
+    color: var(--text-color-dark);
+}
+
+.dark#login_form label,
+.dark#login_form #forgot-password a {
+    color: var(--text-color-dark);
+}
+
+.dark#login_form .input-field {
+    border-bottom: 1px solid var(--text-color-dark);
+}
+
+
+.dark#login_form button {
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+    border: 1px solid var(--text-color-dark);
+}
+
+.dark#login_form button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes dark-to-light {
+    0% {
+        background-color: var(--background-form-dark);
+    }
+
+    100% {
+        background-color: var(--background-light);
+    }
+}
+
+@keyframes light-to-dark {
+    0% {
+        background-color: var(--background-form-light);
+    }
+
+    100% {
+        background-color: var(--background-form-dark);
+    }
 }
